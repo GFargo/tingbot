@@ -1,7 +1,7 @@
 {
     "channel": "codereview",
     "webhook_name": "gfargo_reviewbot",
+    "message_limit": 5,
     "log": {},
-    "transcript": [],
-    "message_limit": 5
+    "transcript": []
 }
