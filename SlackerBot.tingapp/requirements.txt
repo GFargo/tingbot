@@ -1,0 +1,2 @@
+# added per @joerick suggestion https://github.com/tingbot/tingbot-python/issues/48
+tingbot-python==1.0.2
