@@ -25,7 +25,7 @@ from urlparse import urlparse, parse_qsl, parse_qs
 ###
 from lib.helpers import *
 from lib.views import *
-from lib.priv_webhook import *
+from lib.private_webhook import *
 
 
 ####################################
@@ -216,7 +216,7 @@ def check_init():
 ######
 # Webhook Setup
 ######
-@priv_webhook( webhook_name, webhook_domain )
+@private_webhook( webhook_name, webhook_domain )
 def on_webhook( data ):
     store_data( data )
     return

@@ -1,6 +1,6 @@
 import zmq
 
-class priv_webhook(object):
+class private_webhook(object):
     def __init__(self, hook_name, hook_domain):
         ensure_setup( hook_domain )
 
