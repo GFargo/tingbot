@@ -1,4 +1,4 @@
-# Tingbot Apps
+# Tingbot Apps & Development Resources
 
 
 
