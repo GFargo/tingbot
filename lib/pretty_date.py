@@ -1,5 +1,5 @@
 ######
-# Create friendly time string
+# Create Human Readable TimeStamp
 # @see http://stackoverflow.com/questions/1551382/user-friendly-time-format-in-python
 ######
 def pretty_date(time=False):
@@ -23,17 +23,17 @@ def pretty_date(time=False):
 
     if day_diff == 0:
         if second_diff < 10:
-            return "*"
+            return "now"
         if second_diff < 60:
-            return str(second_diff) + "s"
+            return str(second_diff) + " seconds ago"
         if second_diff < 120:
-            return "m~"
+            return "about a minute ago"
         if second_diff < 3600:
-            return str(second_diff / 60) + "m"
+            return str(second_diff / 60) + " minutes ago"
         if second_diff < 7200:
-            return "h~"
+            return "around an hour ago"
         if second_diff < 86400:
-            return str(second_diff / 3600) + "h"
+            return str(second_diff / 3600) + " hours ago"
     if day_diff == 1:
         return "Yesterday"
     if day_diff < 7:
