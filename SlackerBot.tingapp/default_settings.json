@@ -1,6 +1,7 @@
 {
     "channel": "codereview",
-    "webhook_name": "gfargo_reviewbot",
+    "webhook_name": "slackerbot",
+    "webhook_domain": "104.131.161.245",
     "message_limit": 5,
     "log": {},
     "transcript": []

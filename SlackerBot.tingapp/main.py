@@ -5,6 +5,7 @@
 ###### IMPORTS
 ####################################
 
+
 ###
 # Core Libs
 ###
@@ -24,6 +25,7 @@ from urlparse import urlparse, parse_qsl, parse_qs
 ###
 from lib.helpers import *
 from lib.views import *
+from lib.priv_webhook import *
 
 
 ####################################
@@ -32,6 +34,7 @@ from lib.views import *
 
 # retrieve webhook url from config
 webhook_name = str( tingbot.app.settings['webhook_name'] )
+webhook_domain = str( tingbot.app.settings['webhook_domain'] )
 cache_cap = int( tingbot.app.settings['message_limit'] )
 
 state = {}
@@ -39,6 +42,7 @@ state = {}
 state['log'] = tingbot.app.settings['log']
 # state['transcript'] = []
 state['transcript'] = tingbot.app.settings['transcript']
+
 state['screen'] = 'loading'
 
 
@@ -111,7 +115,7 @@ def trim_log():
 ######
 def showTranscript():
     setup_screen( 'transcript' )
-    title_text = "%s v%s - %s" % ( tingbot.app.info['name'], tingbot.app.info['version'], get_ip_address() )
+    title_text = '%s v%s - %s' % ( tingbot.app.info['name'], tingbot.app.info['version'], get_ip_address() )
     screen.text(
         title_text,
         xy=(20, 226),
@@ -212,7 +216,7 @@ def check_init():
 ######
 # Webhook Setup
 ######
-@webhook( webhook_name )
+@priv_webhook( webhook_name, webhook_domain )
 def on_webhook( data ):
     store_data( data )
     return
