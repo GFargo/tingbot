@@ -11,7 +11,6 @@ A Tingbot app that employs Slack's native outgoing webhooks along with Tingbot's
 
 A collection of useful classes and functions to utilize when developing Tingbot apps
 
-##### Private Webhooks
 
 `private_webhook.py`
 
@@ -24,6 +23,7 @@ def on_webhook( data ):
     return
 ```
 
-##### Pretty Date
 
-Formats a timestamp similar to [Moment](http://momentjs.com/) in order to display a human readable timestamp e.g. `around a minute ago` or `2 hours ago`
+`pretty_date.py`
+
+> Formats a timestamp similar to [Moment](http://momentjs.com/) in order to display a human readable timestamp e.g. `around a minute ago` or `2 hours ago`
